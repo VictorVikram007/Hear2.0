@@ -1,0 +1,131 @@
+.blog-carousel-container {
+  width: 100%;
+  max-width: 1500px;  /* larger max width */
+  margin: 3rem auto;
+    margin-top: -1rem;
+
+}
+
+.blog-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  
+}
+
+.slide-content {
+  display: flex;
+  align-items: flex-start; /* vertical alignment at top */
+  gap: 2rem;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+}
+
+/* Image on left */
+.image-wrapper {
+  flex: 0 0 45%; /* wider image */
+}
+
+.blog-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.blog-image:hover {
+  transform: scale(1.05);
+}
+
+/* Text on right */
+.blog-text {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.6;
+    text-align: left; /* left-align text */
+}
+
+.blog-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #6c63ff;
+}
+
+/* Dots styling */
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-dots li button:before {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #6c63ff;
+}
+
+/* Arrows */
+.slick-prev, .slick-next {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 50%;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background: rgba(108, 99, 255, 0.8);
+  color: #fff;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 20px;
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .slide-content {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .image-wrapper {
+    width: 100%;
+  }
+
+  .blog-image {
+    height: 250px;
+  }
+
+  .blog-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .blog-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blog-image {
+    height: 200px;
+  }
+
+  .blog-title {
+    font-size: 1.3rem;
+  }
+
+  .blog-text {
+    font-size: 1rem;
+  }
+}
